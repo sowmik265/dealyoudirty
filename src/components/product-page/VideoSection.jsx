@@ -63,7 +63,7 @@ export default function PeopleLoveVideos() {
 
       {/* Red background container */}
       <div className="bg-[#e6204e] pt-20 pb-12 px-6 md:px-20 max-w-7xl mx-auto min-h-[450px]">
-        <h2 className="text-white text-3xl md:text-4xl font-extrabold mb-10 text-center z-10 relative">
+        <h2 className="text-white text-3xl md:text-4xl font-extrabold mb-10 text-center md:text-left z-10 relative">
           People Love Gettin' Dirty
         </h2>
 
@@ -72,13 +72,6 @@ export default function PeopleLoveVideos() {
           <div className="md:w-1/2 flex gap-6">
             {/* Video 1 */}
             <div className="relative flex-1 rounded-lg overflow-hidden h-[400px] bg-black">
-              {!playing1 && (
-                <img
-                  src="/thumbnail.jpg"
-                  alt="Thumbnail 1"
-                  className="absolute inset-0 w-full h-full object-cover rounded-lg"
-                />
-              )}
               {!playing1 && <PlayButton onClick={handlePlay1} />}
               <video
                 ref={video1Ref}
@@ -94,13 +87,6 @@ export default function PeopleLoveVideos() {
 
             {/* Video 2 */}
             <div className="relative flex-1 rounded-lg overflow-hidden h-[400px] bg-black">
-              {!playing2 && (
-                <img
-                  src="/thumbnail.png"
-                  alt="Thumbnail 2"
-                  className="absolute inset-0 w-full h-full object-cover rounded-lg"
-                />
-              )}
               {!playing2 && <PlayButton onClick={handlePlay2} />}
               <video
                 ref={video2Ref}
@@ -122,3 +108,5 @@ export default function PeopleLoveVideos() {
     </section>
   );
 }
+
+

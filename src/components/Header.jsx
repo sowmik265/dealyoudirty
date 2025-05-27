@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 
-export default function HeaderWithCart() {
+export default function Header() {
   const [cartOpen, setCartOpen] = useState(false);
   const [cartItems, setCartItems] = useState([]);
   const [timeLeft, setTimeLeft] = useState(600); // Set 10 minutes (600 seconds)
